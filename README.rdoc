@@ -1,0 +1,15 @@
+=begin
+== Usage
+Works just like options_from_collection_for_select but allows you to pass in a hash of HTML attributes and methods.
+  options_for_select_with_attributes(collection, value, label, attributes, selected=nil)
+
+== Example
+  form.select :user_id, options_for_select_with_attributes(User.all, :id, :name, { :class => :role }, current_user))
+  
+This will yield options with the class attribute set to user.role:
+  <option value="1" class="admin">George Washington</option>
+  
+== See Also
+((<Ruby|URL:http://api.rubyonrails.org/classes/ActionView/Helpers/FormOptionsHelper.html#method-i-options_from_collection_for_select>))
+
+=end
