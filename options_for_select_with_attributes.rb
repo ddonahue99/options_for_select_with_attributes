@@ -4,7 +4,7 @@ module ApplicationHelper
       html = {}
       option = [object.send(label), object.send(value)]
       attributes.each { |attribute, method| html[attribute] = object.send(method) }
-      html[:selected] = "selected" if (selected == object) || (selected == value)
+      html[:selected] = "selected" if selected && ([object, value].include? selected)
       option << html
     end
   end
