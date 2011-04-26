@@ -1,0 +1,5 @@
+Usage:
+
+Works just like options_from_collection_for_select but allows you to pass in a method for the CSS class.
+
+form.select :field, options_for_select_with_classes(User.all, :id, :name, :cssclass)
